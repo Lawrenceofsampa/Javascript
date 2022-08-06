@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var Name = window.prompt('Whats you name?')
+        document.write(` Hello, ${Name}, your name have ${Name.length} total lyrics. <br>`) //Função lenght para saber a quantidade de letras da string
+        document.write(`Your name in uppercase is ${Name.toUpperCase()}.<br>`) /*Para usar a função de converção em maiúsculo toUpperCase()*/
+        //Para escrever aquilo que se teve de interação com usuário na página document.write
+        document.write(`Your name in lower case is ${Name.toLowerCase()}. <br> `) //observa-se que se pode usar tags de html normais dentro do código do JS
+    </script>
+</body>
+</html>
