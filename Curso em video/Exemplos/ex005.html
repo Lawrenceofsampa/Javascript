@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First steps with DOM</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: red;
+            font: normal 20pt arial ;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>DOM</h1> <!--DOM é um conjunto de objetos dentro do navegador que dá acesso aos componentes internos do documento html-->
+    <p>Result</p>
+    <div id="Msg">click here</div>
+    <p>The way of the <strong>sword</strong></p>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body /*Adquirir elemento pela sua tag de nome*/
+        // Colchetes para selecionar qual das tags vc pretende usar caso existam duas delas
+
+        window.document.write('Aqui está: ' + p1.innerText) //Usar variável p1 para comcatenar com a mensagem seguinte 
+        //innertext usa somente uma linha do texto já innerHtml usa todo o documento
+        corpo.style.background = 'Lightgreen'
+        p1.style.color = 'Green'
+        document.write(p1.innerHTML)
+        var d = window.document.getElementById('Msg')
+        d.style.background = 'grey'
+        d.innerText = 'i m waiting'
+
+    </script>
+</body>
+</html>
