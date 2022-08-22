@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em DOM</title>
+    <style>
+        div#Área{
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Função function para criação de bloco onde se estará toda a interação do JS na tag específica que vc deseja-->
+    <!--Variável dentro da tag script para poder usa-la dentro de todos os outros blocos em function sem precisar digitar novamente-->
+    <!--Adicione parênteses após escrever qual o nome de determinada função-->
+    <div id="Área" onclick="clicar()" onmouseenter="Enter()" onmouseout="Exit ()">
+        Teste...
+    </div>
+    <script>
+        var a = window.document.getElementById('Área')
+        a.addEventListener('click' , clicar)
+        a.addEventListener('mouseenter' , Enter)
+        a.addEventListener('mouseout' , Exit)
+        function clicar(){
+            a.innerText = 'Clicked'
+            a.style.background = 'orange'
+        }
+        function Enter(){
+            a.innerText = 'Entered'
+        }
+        function Exit(){
+            a.innerText = 'Exit'
+            a.style.background = 'green'
+        }
+    </script> 
+</body>
+</html>
