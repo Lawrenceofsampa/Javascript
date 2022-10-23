@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+    .Primeiro{
+        background-color: aqua;
+    }
+    body{
+        text-align: center;
+    }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body>
+    <h2>Ímpar ou par?</h2>
+    <br><br>
+    <table>
+        <tr>
+            <td>Entre com o número: <input type="number" id="Primeiro"></td>
+        </tr>
+        <tr>
+            <td id="Resposta"></td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="button" value="Descobrir" id="Botao" onclick="Descobrir()">
+    <script>
+        function Descobrir(){
+            var a = 2
+            var b = window.document.getElementById("Primeiro")
+            var c = window.document.getElementById("Resposta")
+            var num = Number(b.value)
+            while(num > a){
+                num = num - 2
+                if (num > 2){
+                    c.innerHTML = ("Ímpar")
+                }
+                if(num == 2){
+                    c.innerHTML = ("Par")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .Blue{
+            background-color: aqua;
+            padding: 15px;
+        }
+        table{
+            width: 50%;
+            text-align: center;
+            table-layout: fixed;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        td{
+            padding-left: 15px;
+        }
+        .Light1{
+            background-color: brown;
+        }
+        .Light2{
+            background-color: burlywood;
+        }
+        input{
+            text-justify: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="Blue">
+            <td>Valor da compra</td>
+            <td >Nº de parcelas</td>
+            <td>% de juros</td>
+        </tr>
+        <tr>
+            <td class="Light1"> <input type="number" id="First"></td>
+            <td class="Light2"><input type="number" id="Parcelas"></td>
+            <td class="Light2"><div id="Juros"></div></td>
+        </tr>
+        <br>
+        <input type="button" value="Calcular" onclick="Calcular()">
+    </table>
+    <script>
+        function Calcular(){
+            var total = window.document.getElementById("First")
+            var parcelas = window.document.getElementById("Parcelas")
+            var Juros = window.document.getElementById("Juros")
+            var t1 = Number(total.value)
+            var p1 = Number(parcelas.value)
+            if(p1 == 1){
+                Juros.innerHTML = 0
+            }
+            if(p1 > 1){
+                Juros.innerHTML = 3
+            }
+            if(p1 > 4){
+                Juros.innerHTML = 7
+            }
+        }
+    </script>
+</body>
+</html>
