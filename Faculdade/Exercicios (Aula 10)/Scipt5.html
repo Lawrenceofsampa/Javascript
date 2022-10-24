@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>O Retângulo</h2>
+    <br>
+    <p id="Primeiro">
+        Entre com a primeira nota: <input type="number" id="First">
+    </p>
+
+    <br>
+
+    <p id="Segundo">
+        Entre com a segunda nota: <input type="number" id="Second">
+    </p>
+    <br>
+    <p id="Terceiro">
+        Entre com a terceira nota: <input type="number" id="Third">
+    </p>
+
+
+    <input type="button" id="Calcular" value="Calcular" onclick="Triangulo()">
+
+    <p id="resp">A média é: </p>
+    <script>
+        function Triangulo(){
+            let n1, n2, n3, media, conceito;
+            n1 = Number(document.getElementById("First").value)
+            n2 = Number(document.getElementById("Second").value)
+            n3 = Number(document.getElementById("Third").value)
+            media = (n1 + n2 + n3) / 3
+            conceito = ''
+            if(media >= 10){
+                conceito = 'Aprovado'
+                
+            }
+            else{
+                if(media >= 3 && media < 6){
+                    conceito = ' de exame'
+                }
+                else{
+                    conceito = 'Reprovado'
+                }
+            }
+            document.getElementById("resp").innerHTML = `A média é: ${media} vc esta ${conceito}`
+
+        }
+    </script>
+</body>
+</html>

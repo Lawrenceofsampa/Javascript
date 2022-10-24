@@ -6,12 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 3</title>
     <style>
-
+        .First{
+            background-color: aqua;
+        }
+        .Second{
+            background-color: aqua;
+        }
+        body{
+            text-align: center;
+        }
+        table{
+            margin-right:auto ;
+            margin-left: auto;
+        }
     </style>
 </head>
 <body>
+    <h2>Maior ou igual?</h2>
+    <table>
+        <tr>
+            <td class="First">Entre com o primeiro número: <input type="number"  id="Primeiro"></td>
+        </tr>
+        <tr>
+            <td class="Second">Entre com o segundo número: <input type="number" id="Segundo"></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+    <input type="button" value="Diferenciar" id="Button" onclick="Diferenciar()">
+    <br><br>
+    
+    <p id="Resposta">
+
+    </p>
+
     <script>
-        
+        function Diferenciar(){
+            var number1 = window.doucument.getElementById("Primeiro")
+            var number2 = window.doucument.getElementById("Segundo")
+            var res = window.doucument.getElementById("Resposta")
+            var n1 = Number(n1.value)
+            var n2 = Number(n2.value)
+            switch(n1){
+                case 1(n1 > n2):
+                    document.getElementById("Resposta").innerHTML = "O primeiro número é maior!"
+                    break
+                case 2(n1 == 2):
+                    document.getElementById("Resposta").innerHTML = "Os dois são iguais!"
+                    break
+                case 3(n2 < n1):
+                    document.getElementById("Resposta").innerHTML = "O segundo é maior!"
+                    break
+            }
+        }
     </script>
 </body>
 </html>
