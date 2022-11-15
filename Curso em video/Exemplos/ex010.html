@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máfia Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas da máfia Detran</h1>
+    Velocidade do carro: <input type="number" name="text0" id="text">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="Res">
+
+    </div>
+    <script>
+        function Calcular(){
+            var tex = window.document.getElementById('text')
+            var res = window.document.getElementById('Res')
+            var velo = Number(tex.value)
+            res.innerHTML = `Sua velocidade atual é de ${velo}Km\h`
+            if(velo > 60){
+                res.innerHTML += '<p> Vc está multado por excesso de velocidade!'
+            }
+            res.innerHTML += '<p> Dirija sempre com o cinto'
+        }
+    </script>
+</body>
+</html>
